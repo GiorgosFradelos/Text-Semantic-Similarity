@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}BERT Siamese{% endblock %}
+
+
+{% block content %}
+<body>
+    <h2>Siamese BERT</h2>
+
+    <form action='/siamese_bert_similarity' method="post">
+
+        Input text1:
+         <input type='text' name="sent1" required><br><br>
+        Input text2:
+        <input type='text' name="sent2" required>
+        <br><br>
+        {{ pred }}
+        <br><br>
+        <input type='submit' name="siamese_bert_similarity" value="Compare Texts">
+
+    </form>
+
+    <form action='/clear_siam_BERT' method="post">
+
+        <input type='submit' name="clear_siamese_bert" value="clear">
+    </form>
+    </body>
+
+{% endblock %}

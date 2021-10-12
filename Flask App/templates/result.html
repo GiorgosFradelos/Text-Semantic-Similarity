@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}BERT Simple{% endblock %}
+
+
+{% block content %}
+<form action=#, method='post'>
+    <p>sent1</p>
+    <p><input type="text", name="sent_1" /></p>
+    <p>sent2</p>
+    <p><input type="text", name="sent_2" /></p>
+    <p><input type="submit", value="submit" /></p>
+</form>
+
+<div>
+    <p>similarity: {{ similariy }}</p>
+</div>
+{% endblock %}

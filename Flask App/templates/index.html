@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Home Page{% endblock %}
+
+
+{% block content %}
+{{ status }}
+<body>
+<h2>Home Page</h2>
+    <form action='/load_models' method="post">
+        <input type='submit' name="load_models" value="load_models">
+    </form>
+</body>
+
+{% endblock %}

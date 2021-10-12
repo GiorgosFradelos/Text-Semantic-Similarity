@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Simple BERT{% endblock %}
+
+
+{% block content %}
+<body>
+    <h2>Simple BERT</h2>
+
+    <form action='/inference' method="post">
+        {% csrf_token %}
+        Input text1:
+         <input type='text' name="sent1" required><br><br>
+        Input text2:
+        <input type='text' name="sent2" required>
+        <br><br>
+        {{ pred }}
+        {{ prob }}
+        <br><br>
+        <input type='submit' name="param" value="Execute Python Script">
+
+    </form>
+
+    <form action='/clear' method="post">
+        {% csrf_token %}
+        <input type='submit' name="clear" value="clear">
+    </form>
+    </body>
+
+{% endblock %}
